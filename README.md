@@ -88,6 +88,10 @@ CUDA_VISIBLE_DEVICES="" nohup uv run python src/train.py --arm ple --vocab 32768
   --batch-size 16 --seq-len 256 --steps 5000 --seed 0 --tag cleandeploy \
   > training_log.txt 2>&1 &
 ```
+To monitor the training progress in real-time, view the log file:
+```bash
+tail -f training_log.txt
+```
 
 **9. Export and quantize**
 
